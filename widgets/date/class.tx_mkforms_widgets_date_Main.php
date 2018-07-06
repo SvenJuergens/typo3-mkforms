@@ -267,6 +267,9 @@ class tx_mkforms_widgets_date_Main extends formidable_mainrenderlet
         } else {
             $year = $currentYear;
         }
+        if (array_key_exists('%y', $datePartsByFormatCode)) {
+            $year = $datePartsByFormatCode['%y'];
+        }
 
         if (array_key_exists('%H', $datePartsByFormatCode)) {
             $hour = $datePartsByFormatCode['%H'];
